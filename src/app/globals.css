@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #D1A584;
+  --foreground: #D1A584;
+  --font-primary: "DM Serif Display", serif;
 }
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -14,8 +29,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #D1A584;
+    --foreground: #D1A584;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-custom {
+    animation: pulse 300ms; /* Pulsazione di 200ms per ciclo */
+  }
+
+  /* Personalizza la pulsazione */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05); /* Leggero gonfiamento */
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
 
