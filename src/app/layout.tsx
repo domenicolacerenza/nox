@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Menu from "@/components/Menu";
 import Header from "@/components/Header";
@@ -43,6 +43,7 @@ export default function RootLayout({
 
       <body className="flex dm-serif-display-regular min-h-screen flex-col items-center justify-between">
         {children}
+        <Analytics />
         <Menu />
         <Header></Header>
       </body>
